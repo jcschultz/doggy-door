@@ -1,0 +1,19 @@
+<aura:component access="public" implements="forceCommunity:availableForAllPageTypes">
+	
+	<aura:dependency resource="markup://c:DDA_ChartJSComponent" />
+	
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<aura:handler event="c:DDA_DataDispatcherEvent" action="{!c.handleDataDispatch}" />
+	
+	<aura:attribute name="chartType" type="String" access="public" default="" description="Toggle for daily/hourly chart. Set in community builder through the bundle's design file." />
+	<aura:attribute name="title" type="String" access="private" default="" description="Component title" />
+	
+	<div class="slds">
+		<div class="slds-text-heading--medium">{!v.title}</div>
+		<div class="chart-container" aura:id="chartContainer">
+			{!v.body}
+		</div>
+	</div><!--.slds-->
+	
+	
+</aura:component>

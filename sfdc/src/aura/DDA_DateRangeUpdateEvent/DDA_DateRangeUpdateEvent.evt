@@ -1,0 +1,4 @@
+<aura:event access="public" type="APPLICATION" description="Event for handling the change to date ranges">
+	<aura:attribute name="fromTimeStamp" type="Integer" access="public" default="" description="From date in unix time stamp format (13 characters)" />
+	<aura:attribute name="toTimeStamp" type="Integer" access="public" default="" description="To date in unix time stamp format (13 characters)" />
+</aura:event>

@@ -1,0 +1,17 @@
+<aura:component >
+	<ltng:require scripts="{!$Resource.ChartJS + '/Chart.bundle.min.js'}"
+			afterScriptsLoaded="{!c.handleScriptsLoaded}" />
+			
+	
+	<aura:attribute name="chartType" type="String" access="public" default="" description="Type of chart: bar, line, radar, polarArea, pie, doughnut" />
+	<aura:attribute name="data" type="Object" access="public" default="" description="Chart data object" />
+	<aura:attribute name="options" type="Object" access="public" default="" description="Chart config options" />
+	<aura:attribute name="width" type="String" access="public" default="" description="Canvas width" />
+	<aura:attribute name="height" type="String" access="public" default="" description="Canvas height" />
+	<aura:attribute name="style" type="String" access="public" default="" description="Canvas style" />
+	
+	<div>
+		<canvas id="chartCanvas" aura:id="chartCanvas"></canvas>
+	</div>
+	
+</aura:component>

@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="Event for sending data to chart components" access="public">
+	<aura:attribute name="records" type="Doggy_Door_Activity__c[]" access="public" default="" description="Collection of doggy door activity records." />
+</aura:event>

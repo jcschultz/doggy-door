@@ -1,0 +1,3 @@
+<aura:documentation>
+	<aura:description>Component for displaying total count of activity records</aura:description>
+</aura:documentation>

@@ -1,0 +1,3 @@
+<aura:documentation>
+	<aura:description>Component for retrieving data and dispatching to other components.</aura:description>
+</aura:documentation>

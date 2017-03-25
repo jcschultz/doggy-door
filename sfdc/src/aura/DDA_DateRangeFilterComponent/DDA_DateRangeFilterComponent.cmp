@@ -1,0 +1,28 @@
+<aura:component access="public" implements="forceCommunity:availableForAllPageTypes">
+	
+	<ltng:require scripts="{!$Resource.MomentJS}" afterScriptsLoaded="{!c.handleScriptsLoaded}" />
+	
+	<aura:registerEvent name="dateChangeEvent" type="c:DDA_DateRangeUpdateEvent" />
+	
+	<div class="slds">
+		<div class="slds-text-heading--small">Select a Date Range:</div>
+		
+		<form class="slds-form--inline">
+			<div class="slds-form-element">
+				<label class="slds-form-element__label">From:</label>
+				<div class="slds-form-element__control">
+					<ui:inputDate aura:id="fromDate" value="" displayDatePicker="true" />
+				</div>
+			</div>
+			<div class="slds-form-element">
+				<label class="slds-form-element__label">To:</label>
+				<div class="slds-form-element__control">
+					<ui:inputDate aura:id="toDate" value="" displayDatePicker="true" />
+				</div>
+			</div>
+			<div class="slds-form-element">
+				<ui:button class="slds-button slds-button--brand" label="Display Activity" press="{!c.handleFilterButtonPress}" />
+			</div>
+		</form><!--.slds-form-inline-->
+	</div><!--.slds-->
+</aura:component>

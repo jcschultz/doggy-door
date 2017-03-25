@@ -1,0 +1,3 @@
+<aura:documentation>
+	<aura:description>Component for displaying the date range inputs.</aura:description>
+</aura:documentation>
