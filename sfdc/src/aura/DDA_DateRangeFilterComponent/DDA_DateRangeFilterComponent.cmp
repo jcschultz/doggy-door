@@ -11,13 +11,13 @@
 			<div class="slds-form-element">
 				<label class="slds-form-element__label">From:</label>
 				<div class="slds-form-element__control">
-					<ui:inputDate aura:id="fromDate" value="" displayDatePicker="true" />
+					<ui:inputDate aura:id="fromDate" value="" displayDatePicker="true" format="MM/DD/YYYY" />
 				</div>
 			</div>
 			<div class="slds-form-element">
 				<label class="slds-form-element__label">To:</label>
 				<div class="slds-form-element__control">
-					<ui:inputDate aura:id="toDate" value="" displayDatePicker="true" />
+					<ui:inputDate aura:id="toDate" value="" displayDatePicker="true" format="MM/DD/YYYY" />
 				</div>
 			</div>
 			<div class="slds-form-element">
