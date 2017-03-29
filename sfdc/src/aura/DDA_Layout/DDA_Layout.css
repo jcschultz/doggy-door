@@ -1,0 +1,29 @@
+.THIS .grizz-col {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.THIS .header-content-region {}
+
+.THIS .header-content-region .ui-widget {
+	margin-bottom: 2rem;
+}
+
+.THIS .header-content-region .ui-widget .dda-header-component {
+	margin-bottom: 4rem;
+	margin-top: 2rem;
+}
+
+.THIS .header-content-region .ui-widget .dda-header-component .slds-text-heading--small {
+	font-weight: 300;
+	font-style: italic;
+}
+
+.THIS .chart-left-region {
+	
+}
+
+.THIS .chart-right-region {
+	
+}

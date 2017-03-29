@@ -1,0 +1,11 @@
+<aura:component access="public" implements="forceCommunity:availableForAllPageTypes">
+	
+	<aura:attribute name="header" type="String" access="public" default="" description="Page header" />
+	<aura:attribute name="subheader" type="String" access="public" default="" description="Page subheader" />
+	
+	<div class="dda-header-component">
+		<div class="slds-text-heading--large">{!v.header}</div>
+		<div class="slds-text-heading--small">{!v.subheader}</div>
+	</div>
+	
+</aura:component>

@@ -3,7 +3,7 @@
 	<aura:handler event="c:DDA_DataDispatcherEvent" action="{!c.handleDataDispatch}" />
 	
 	<div class="slds">
-		<div class="slds-text-align--center slds-text-heading--large">
+		<div class="slds-text-heading--small">
 			<ui:outputText aura:id="totalCount" value="" />
 		</div>
 	</div><!--.slds-->

@@ -5,7 +5,7 @@
 	<aura:registerEvent name="dateChangeEvent" type="c:DDA_DateRangeUpdateEvent" />
 	
 	<div class="slds">
-		<div class="slds-text-heading--small">Select a Date Range:</div>
+		<div>Select a Date Range:</div>
 		
 		<form class="slds-form--inline">
 			<div class="slds-form-element">

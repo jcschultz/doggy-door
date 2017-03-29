@@ -9,7 +9,7 @@
 	<aura:attribute name="title" type="String" access="private" default="" description="Component title" />
 	
 	<div class="slds">
-		<div class="slds-text-heading--medium">{!v.title}</div>
+		<div>{!v.title}</div>
 		<div class="chart-container" aura:id="chartContainer">
 			{!v.body}
 		</div>

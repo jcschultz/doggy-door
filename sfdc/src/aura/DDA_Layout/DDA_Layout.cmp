@@ -1,0 +1,23 @@
+<aura:component implements="forceCommunity:themeLayout" description="Custom Content Layout for DDA" access="global">
+	
+	<aura:attribute name="headerContent" type="Aura.Component[]" required="false" />
+	<aura:attribute name="chartLeftContent" type="Aura.Component[]" required="false" />
+	<aura:attribute name="chartRightContent" type="Aura.Component[]" required="false" />
+
+	<div class="slds-grid slds-grid--frame slds-grid--vertical-stretch">
+		<div class="slds-max-small-hide slds-medium-size--1-of-2 slds-large-size--1-of-3 grizz-col" style="{!'background-image:url(' + $Resource.DDA_Assets + '/images/grizz.jpg);'}"></div>
+		<div class="slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--2-of-3 slds-p-horizontal--medium">
+			<div class="slds-grid slds-wrap">
+				<div class="slds-size--1-of-1 header-content-region">
+					{!v.headerContent}
+				</div>
+				<div class="slds-size--1-of-1 slds-large-size--1-of-2 chart-left-region">
+					{!v.chartLeftContent}
+				</div>
+				<div class="slds-size--1-of-1 slds-large-size--1-of-2 chart-right-region">
+					{!v.chartRightContent}
+				</div>
+			</div>
+		</div>
+	</div>
+</aura:component>
