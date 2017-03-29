@@ -1,5 +1,5 @@
 # Connected Apps for Puppy Craps
-My puppy used to ring a bell when she needed to go out. I got lazy and tire of having to open the door for her. So I installed a doggy door. At first she was afraid of the doggy door and only reluctantly used it. And suddenly I realized that, without her ringing the bell, I had no clue if she was actually going outside to go to the bathroom. Naturally, the only thing I could possibly do to solve this mystery was to whip together a doggy door tracker with a magnetic sensor, Raspberry Pi, Salesforce Connected App, Salesforce Community, and some Salesforce Lightning Components.
+My puppy used to ring a bell when she needed to go out. She rang it a lot, and I got lazy. So, I installed a doggy door. At first she was afraid of the doggy door and only reluctantly used it, but the bell ringing stopped. And suddenly I realized that, without her ringing the bell, I had no clue if she was actually going outside to go to the bathroom. Naturally, the only thing I could possibly do to solve this mystery was to whip together a doggy door tracker with a magnetic sensor, Raspberry Pi, Salesforce Connected App, Salesforce Community, and some Salesforce Lightning Components.
 
 ![doggy-door](assets/screenshot.png)
 
