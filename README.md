@@ -1,9 +1,12 @@
 # Connected Apps for Puppy Craps
 My puppy used to ring a bell when she needed to go out. I got lazy and tire of having to open the door for her. So I installed a doggy door. At first she was afraid of the doggy door and only reluctantly used it. And suddenly I realized that, without her ringing the bell, I had no clue if she was actually going outside to go to the bathroom. Naturally, the only thing I could possibly do to solve this mystery was to whip together a doggy door tracker with a magnetic sensor, Raspberry Pi, Salesforce Connected App, Salesforce Community, and some Salesforce Lightning Components.
 
+![doggy-door](assets/screenshot.png)
+
 This project polls a door sensor to see if it's open. If the door just changed states from closed to open, then the script will log into a Salesforce Connected App and create a new Doggy Door Activity record. If the door is open for longer than 5 minutes, then that means either my dog is stuck in the door or the door didn't shut all the way. Either way, I would want to know. And so the script will send out an email to me to let me know the door has been open longer than 5 minutes. The script also emails me if there were any errors creating the Salesforce records. And on the Salesforce side of things, I've created a bunch of Lightning components for displaying those activity records on a Community page.
 
-# ![doggy-door](assets/screenshot.png)
+## Demo
+[http://johnschultz.rock/doggydoor](http://johnschultz.rocks/doggydoor)
 
 ## Getting Started
 
