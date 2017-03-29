@@ -128,6 +128,7 @@
         <columns>CREATED_DATE</columns>
         <columns>Day__c</columns>
         <columns>Hour__c</columns>
+        <columns>Timestamp__c</columns>
         <columns>OBJECT_ID</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
