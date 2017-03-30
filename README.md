@@ -85,3 +85,5 @@ Once all of that has been customized and saved to the Pi, you'll start the scrip
 sudo nodejs /path/to/the/script/doggydoor.js
 ```
 
+## Credit
+[Steve Deren](https://github.com/spderen) gets credit for the app's name. I originally called it "Puppy Craps - Connected Apps." He suggested "Connected Apps for Puppy Craps." And the world has never been the same since.
