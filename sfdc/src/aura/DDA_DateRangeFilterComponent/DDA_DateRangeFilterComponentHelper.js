@@ -1,7 +1,7 @@
 ({
 	setInitialDates : function(component, event, helper) {
-		var fromDate = moment().startOf('week').format('MM/DD/YYYY');
-		var toDate = moment().endOf('week').format('MM/DD/YYYY');
+		var fromDate = moment().startOf('week').format('YYYY-MM-DD');
+		var toDate = moment().endOf('week').format('YYYY-MM-DD');
 		
 		component.find('fromDate').set('v.value', fromDate);
 		component.find('toDate').set('v.value', toDate);
