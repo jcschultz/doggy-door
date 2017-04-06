@@ -34,7 +34,7 @@
 				component.set('v.error', response.getError());
 				$A.util.removeClass(notification, 'slds-hide');
 			}
-			console.log('response', response);
+			// console.log('response', response);
 			
 			$A.util.addClass(spinner, 'slds-hide');
 			
