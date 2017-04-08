@@ -1,0 +1,9 @@
+<aura:component access="public" implements="forceCommunity:availableForAllPageTypes">
+	
+	<aura:attribute name="subheader" type="String" access="public" default="Update me!" description="Section heading" />
+	
+	<div class="dda-subheader-component">
+		<div class="slds-section-title--divider">{!v.subheader}</div>
+	</div>
+	
+</aura:component>
