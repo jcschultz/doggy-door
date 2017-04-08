@@ -1,0 +1,19 @@
+<aura:event type="APPLICATION" description="Event for dispatching recent aggregated data.">
+	<aura:attribute name="todayCount" type="Integer" access="public" description="Count of trips for today." />
+	<aura:attribute name="todayHighlightLabel" type="String" access="public" description="Label for today's highlight." />
+	<aura:attribute name="todayHighlightValue" type="String" access="public" description="Value for today's highlight." />
+	<aura:attribute name="todayBusyHour" type="Integer" access="public" description="Value of the busiest hour." />
+	<aura:attribute name="todayBusyHourAmPm" type="String" access="public" description="AM or PM" />
+	<aura:attribute name="todayBusyHourCount" type="Integer" access="public" description="Trips during the busiest hour." />
+	<aura:attribute name="weekCount" type="Integer" access="public" description="Count of trips for this week." />
+	<aura:attribute name="weekHighlightLabel" type="String" access="public" description="Label for this week's highlight." />
+	<aura:attribute name="weekHighlightValue" type="String" access="public" description="Value for this week's highlight." />
+	<aura:attribute name="weekDayCount" type="Integer[]" access="public" description="Array of activities summed by week day." />
+	<aura:attribute name="weekDayLabels" type="String[]" access="public" description="Array of week day labels." />
+	<aura:attribute name="weekDayBusiestCount" type="Integer" access="public" description="Count of trips during the busiest day." />
+	<aura:attribute name="monthCount" type="Integer" access="public" description="Count of trips for this month." />
+	<aura:attribute name="monthHighlightLabel" type="String" access="public" description="Label for this month's highlight." />
+	<aura:attribute name="monthHighlightValue" type="String" access="public" description="Value for this month's highlight." />
+	<aura:attribute name="monthDayCount" type="Integer[]" access="public" description="Array of activities summed by month day." />
+	<aura:attribute name="monthDayBusiestCount" type="Integer" access="public" description="Count of trips during the busiest day." />
+</aura:event>

@@ -1,0 +1,8 @@
+<aura:component access="public" implements="forceCommunity:availableForAllPageTypes" controller="DDA_Controller">
+	
+	<ltng:require scripts="{!$Resource.MomentJS}" afterScriptsLoaded="{!c.handleScriptsLoaded}" />
+	
+	<aura:registerEvent name="recentDispatcher" type="c:DDA_RecentDataDispatcherEvent" />
+	<aura:registerEvent name="layoutUpdate" type="c:DDA_LayoutUpdateRequestEvent" />
+	
+</aura:component>

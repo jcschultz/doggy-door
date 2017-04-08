@@ -1,0 +1,3 @@
+<aura:documentation>
+	<aura:description>Retrieves, aggregates, and dispatches recent data.</aura:description>
+</aura:documentation>

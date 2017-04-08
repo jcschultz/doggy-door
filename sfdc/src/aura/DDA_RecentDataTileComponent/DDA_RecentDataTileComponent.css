@@ -1,0 +1,59 @@
+.THIS .outer-tile-container {
+	width: 100%;
+	-webkit-transition: 150ms linear;
+	-moz-transition: 150ms linear;
+	-o-transition: 150ms linear;
+	-ms-transition: 150ms linear;
+	transition: 150ms linear;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.THIS .outer-tile-container.closed {
+	-webkit-transition: 150ms linear;
+	-moz-transition: 150ms linear;
+	-o-transition: 150ms linear;
+	-ms-transition: 150ms linear;
+	transition: 150ms linear;
+	width: 0;
+}
+
+.THIS .tile-face {
+	height: 200px;
+	background: #f4f6f9;
+	border-radius: 15px;
+	padding: .5rem 1rem;
+	margin: .5rem;
+	height: 200px;
+	position: relative;
+}
+
+.THIS .tile-title {
+	white-space: nowrap;
+}
+
+.THIS .tile-count {
+	margin: 1rem auto;
+	font-size: 5rem;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.THIS .flip-icon {
+	position: absolute;
+	top: .25rem;
+	right: .25rem;
+	cursor: pointer;
+}
+
+.THIS .tile-chart-container {
+	height: 120px;
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+}
+
+.THIS .tile-back-info {
+	text-align: center;
+	white-space: nowrap;
+}

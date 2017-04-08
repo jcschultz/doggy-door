@@ -1,0 +1,59 @@
+<aura:component access="public" implements="forceCommunity:availableForAllPageTypes">
+	
+	<aura:attribute name="chartType" type="String" access="public" default="" description="Toggle for chart/data type." />
+	<aura:dependency resource="markup://c:DDA_ChartJSComponent" />
+	
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<aura:handler event="c:DDA_RecentDataDispatcherEvent" action="{!c.handleDataDispatch}" />
+	
+	<aura:attribute name="title" type="String" access="private" default="" description="Tile's title." />
+	<aura:attribute name="titleBack" type="String" access="private" default="" description="Tile's back title." />
+	<aura:attribute name="count" type="Integer" access="private" default="0" description="Number of trips for this tile." />
+	<aura:attribute name="isToday" type="Boolean" access="private" default="false" description="Tile is Today tile." />
+	<aura:attribute name="isWeek" type="Boolean" access="private" default="false" description="Tile is 7 Day tile." />
+	<aura:attribute name="isMonth" type="Boolean" access="private" default="false" description="Tile is 30 Day tile." />
+	<aura:attribute name="showFront" type="Boolean" access="private" default="true" description="Toggles between the front and back." />
+	<aura:attribute name="showChart" type="Boolean" access="private" default="false" description="Used to display chart." />
+	<aura:attribute name="jsChartType" type="String" access="private" default="" description="Type of chart to display." />
+	<aura:attribute name="jsChartData" type="Object" access="private" default="" description="Chart data object." />
+	<aura:attribute name="jsChartOptions" type="Object" access="private" default="" description="Chart options." />
+	<aura:attribute name="tileBackInfo" type="String" access="private" default="" description="Info for back of tile." />
+	
+	<div class="slds">
+		<div class="outer-tile-container" aura:id="outerTileContainer">
+			<aura:if isTrue="{!v.showFront}">
+				<div class="tile-front tile-face" aura:id="tileFront">
+					<div class="tile-title"><ui:outputRichText value="{!v.title}" /></div>
+					<div class="tile-count">{!v.count}</div>
+					<div class="flip-icon" onclick="{!c.flipTile}">
+						<aura:if isTrue="{!v.isToday}">
+							<lightning:icon iconName="utility:clock" size="small" />
+						</aura:if>
+						<aura:if isTrue="{!v.isWeek}">
+							<lightning:icon iconName="utility:topic" size="small" />
+						</aura:if>
+						<aura:if isTrue="{!v.isMonth}">
+							<lightning:icon iconName="utility:trending" size="small" />
+						</aura:if>
+					</div><!--.flip-icon-->
+				</div><!--.tile-front-->
+			</aura:if>
+			
+			<aura:if isTrue="{!not(v.showFront)}">
+				<div class="tile-back tile-face" aura:id="tileBack">
+					<div class="tile-title"><ui:outputRichText value="{!v.title}" /></div>
+					<aura:if isTrue="{!v.showChart}">
+						<div class="tile-chart-container" aura:id="chartContainer">
+							<c:DDA_ChartJSComponent style="height: 120px;" height="120" chartType="{!v.jsChartType}" data="{!v.jsChartData}" options="{!v.jsChartOptions}" />
+						</div>
+					</aura:if>
+					<div class="tile-back-info"><ui:outputRichText value="{!v.tileBackInfo}" /></div>
+					<div class="flip-icon" onclick="{!c.flipTile}">
+						<lightning:icon iconName="utility:reply" size="small" />
+					</div><!--.flip-icon-->
+				</div><!--.tile-back-->
+			</aura:if>
+		</div><!--.outer-tile-container-->
+	</div>
+	
+</aura:component>
