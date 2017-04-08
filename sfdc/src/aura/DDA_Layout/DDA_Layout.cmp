@@ -1,6 +1,10 @@
 <aura:component implements="forceCommunity:themeLayout" description="Custom Content Layout for DDA" access="global">
 	
 	<aura:attribute name="headerContent" type="Aura.Component[]" required="false" />
+	<aura:attribute name="topLeft" type="Aura.Component[]" required="false" />
+	<aura:attribute name="topMiddle" type="Aura.Component[]" required="false" />
+	<aura:attribute name="topRight" type="Aura.Component[]" required="false" />
+	<aura:attribute name="bottomHeaderContent" type="Aura.Component[]" required="false" />
 	<aura:attribute name="chartLeftContent" type="Aura.Component[]" required="false" />
 	<aura:attribute name="chartRightContent" type="Aura.Component[]" required="false" />
 
@@ -10,8 +14,20 @@
 			<c:DDA_LayoutUtilComponent />
 			
 			<div class="slds-grid slds-wrap">
-				<div class="slds-size--1-of-1 header-content-region">
+				<div class="slds-size--1-of-1 top-header-content-region">
 					{!v.headerContent}
+				</div>
+				<div class="slds-size--1-of-1 slds-large-size--1-of-3 top-tile-region">
+					{!v.topLeft}
+				</div>
+				<div class="slds-size--1-of-1 slds-large-size--1-of-3 top-tile-region">
+					{!v.topMiddle}
+				</div>
+				<div class="slds-size--1-of-1 slds-large-size--1-of-3 top-tile-region">
+					{!v.topRight}
+				</div>
+				<div class="slds-size--1-of-1 bottom-header-content-region">
+					{!v.bottomHeaderContent}
 				</div>
 				<div class="slds-size--1-of-1 slds-large-size--1-of-2 chart-left-region">
 					{!v.chartLeftContent}

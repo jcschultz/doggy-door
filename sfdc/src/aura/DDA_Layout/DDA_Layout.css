@@ -4,18 +4,21 @@
 	background-position: center;
 }
 
-.THIS .header-content-region {}
+.THIS .bottom-header-content-region {
+	margin-top: 4rem;
+}
 
-.THIS .header-content-region .ui-widget {
+.THIS .top-header-content-region .ui-widget,
+.THIS .bottom-header-content-region .ui-widget {
 	margin-bottom: 2rem;
 }
 
-.THIS .header-content-region .ui-widget .dda-header-component {
+.THIS .dda-header-component {
 	margin-bottom: 4rem;
 	margin-top: 2rem;
 }
 
-.THIS .header-content-region .ui-widget .dda-header-component .slds-text-heading--small {
+.THIS .dda-header-component .slds-text-heading--small {
 	font-weight: 300;
 	font-style: italic;
 }
