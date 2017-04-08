@@ -1,10 +1,29 @@
 ({
-	setInitialDates : function(component, event, helper) {
-		var fromDate = moment().startOf('week').format('YYYY-MM-DD');
-		var toDate = moment().endOf('week').format('YYYY-MM-DD');
+	
+	RANGES : {
+		TODAY : 'day',
+		WEEK : 'week',
+		MONTH : 'month',
+		CUSTOM : 'week'
+	},
+	
+	handleDateButtonClick : function(component, event, helper) {
+		var dateRange = event.target.dataset.choice;
+		component.set('v.buttonChoice', dateRange);
 		
-		component.find('fromDate').set('v.value', fromDate);
-		component.find('toDate').set('v.value', toDate);
+		if (dateRange != 'CUSTOM') {
+			helper.setDates(component, event, helper);
+		}
+	},
+	
+	setDates : function(component, event, helper) {
+		var dateRange = component.get('v.buttonChoice');
+		var rangeType = helper.RANGES[dateRange];
+		var fromDate = moment().startOf(rangeType).format('YYYY-MM-DD');
+		var toDate = moment().endOf(rangeType).format('YYYY-MM-DD');
+		
+		component.set('v.fromDate', fromDate);
+		component.set('v.toDate', toDate);
 		
 		helper.updateDateRange(component, event, helper);
 	},
@@ -18,8 +37,8 @@
 			paramTo,
 			dateChangeEvent;
 			
-		fromDate = component.find('fromDate').get('v.value');
-		toDate = component.find('toDate').get('v.value');
+		fromDate = component.get('v.fromDate');
+		toDate = component.get('v.toDate');
 		
 		if (!fromDate || !toDate) {
 			return;
