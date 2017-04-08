@@ -2,19 +2,6 @@
 	
 	<aura:handler event="c:DDA_DateRangeUpdateEvent" action="{!c.handleDateRangeUpdateEvent}" />
 	<aura:registerEvent name="dataDispatcher" type="c:DDA_DataDispatcherEvent" />
-	
-	<aura:attribute name="error" type="String" access="private" default="" description="Error string" />
-	
-	<lightning:spinner variant="brand" size="large" aura:id="spinner" class="slds-hide" alternativeText="Loading records..." />
-	
-	<div class="slds-notify_container slds-hide" aura:id="notification">
-		<div class="slds-notify slds-notify--alert slds-theme--error slds-theme--alert-texture" role="alert">
-			<span class="slds-assistive-text">Error</span>
-			<h2>
-				<lightning:icon iconName="utility:ban" class="slds-icon slds-icon--small slds-m-right--x-small" />
-				There was an error retrieving the Doggy Door Activity records. Error: {!v.error}
-			</h2>
-		</div>
-	</div>
+	<aura:registerEvent name="layoutUpdate" type="c:DDA_LayoutUpdateRequestEvent" />
 	
 </aura:component>
