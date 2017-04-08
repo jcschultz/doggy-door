@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION" description="Event for requesting updates to the layout (error notification, spinner)">
+	<aura:attribute name="eventType" type="String" description="SPINNER or ERROR" />
+	<aura:attribute name="showOrHide" type="String" description="SHOW or HIDE" />
+	<aura:attribute name="message" type="String" description="String for displaying in notification." />
+</aura:event>
