@@ -1,0 +1,25 @@
+<aura:component access="public" implements="forceCommunity:availableForAllPageTypes">
+	
+	<aura:handler event="c:DDA_LayoutUpdateRequestEvent" action="{!c.handleLayoutUpdateRequest}" />
+	
+	<aura:attribute name="error" type="String" access="private" default="" description="Error string" />
+	<aura:attribute name="showSpinner" type="Boolean" access="private" default="false" description="Toggle spinner visibility." />
+	<aura:attribute name="showError" type="Boolean" access="private" default="false" description="Toggle error visibility." />
+	
+	<aura:if isTrue="{!v.showError}">
+		<div class="slds-notify_container slds-hide" aura:id="notification">
+			<div class="slds-notify slds-notify--alert slds-theme--error slds-theme--alert-texture" role="alert">
+				<span class="slds-assistive-text">Error</span>
+				<h2>
+					<lightning:icon iconName="utility:ban" class="slds-icon slds-icon--small slds-m-right--x-small" />
+					<ui:outputRichText value="{!v.error}" />
+				</h2>
+			</div>
+		</div>
+	</aura:if>
+	
+	<aura:if isTrue="{!v.showSpinner}">
+		<lightning:spinner variant="brand" size="large" aura:id="spinner" alternativeText="Loading records..." />
+	</aura:if>
+	
+</aura:component>

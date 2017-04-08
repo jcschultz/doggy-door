@@ -1,0 +1,3 @@
+<aura:documentation>
+	<aura:description>Component for layout utils, like spinners and errors</aura:description>
+</aura:documentation>
