@@ -12,7 +12,7 @@
 		
 		<div>Select a Date Range:</div>
 		<div class="slds-grid slds-wrap">
-			<div class="slds-button-group slds-m-right--medium" role="group">
+			<div class="slds-button-group slds-m-right--medium slds-m-bottom--small" role="group">
 				<button class="{!'slds-button ' + if(v.buttonChoice == 'TODAY', 'slds-button--brand', 'slds-button--neutral')}" data-choice="TODAY" onclick="{!c.handleDateButtonClick}">Today</button>
 				<button class="{!'slds-button ' + if(v.buttonChoice == 'WEEK', 'slds-button--brand', 'slds-button--neutral')}" data-choice="WEEK" onclick="{!c.handleDateButtonClick}">This Week</button>
 				<button class="{!'slds-button ' + if(v.buttonChoice == 'MONTH', 'slds-button--brand', 'slds-button--neutral')}" data-choice="MONTH" onclick="{!c.handleDateButtonClick}">This Month</button>
@@ -20,7 +20,7 @@
 			</div>
 
 			<aura:if isTrue="{!v.buttonChoice == 'CUSTOM'}">
-				<form class="slds-form--inline">
+				<form class="slds-form--inline  slds-m-bottom--small">
 					<div class="slds-form-element">
 						<label class="slds-form-element__label">From:</label>
 						<div class="slds-form-element__control">
