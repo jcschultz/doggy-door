@@ -7,6 +7,8 @@
 	<div class="slds-grid slds-grid--frame slds-grid--vertical-stretch">
 		<div class="slds-max-small-hide slds-medium-size--1-of-2 slds-large-size--1-of-3 grizz-col" style="{!'background-image:url(' + $Resource.DDA_Assets + '/images/grizz.jpg);'}"></div>
 		<div class="slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--2-of-3 slds-p-horizontal--medium">
+			<c:DDA_LayoutUtilComponent />
+			
 			<div class="slds-grid slds-wrap">
 				<div class="slds-size--1-of-1 header-content-region">
 					{!v.headerContent}
