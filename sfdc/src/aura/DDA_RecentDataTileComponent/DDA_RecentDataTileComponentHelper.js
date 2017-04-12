@@ -18,7 +18,8 @@
 			tooltips: {
 				enabled: false
 			},
-			responsive: false,
+			responsive: true,
+			maintainAspectRatio: false,
 			legend: {
 				display: false
 			}
