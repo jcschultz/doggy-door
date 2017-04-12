@@ -31,3 +31,9 @@
 	text-align: center;
 	margin: 1rem;
 }
+
+.THIS .dda-subheader-component .header-tip {
+	text-transform: none;
+	font-style: italic;
+	font-weight: 300;
+}
