@@ -22,10 +22,10 @@
 	<div class="slds">
 		<div class="outer-tile-container" aura:id="outerTileContainer">
 			<aura:if isTrue="{!v.showFront}">
-				<div class="tile-front tile-face" aura:id="tileFront">
+				<div class="tile-front tile-face" aura:id="tileFront" onclick="{!c.flipTile}">
 					<div class="tile-title"><ui:outputRichText value="{!v.title}" /></div>
 					<div class="tile-count">{!v.count}</div>
-					<div class="flip-icon" onclick="{!c.flipTile}">
+					<div class="flip-icon">
 						<aura:if isTrue="{!v.isToday}">
 							<lightning:icon iconName="utility:clock" size="small" />
 						</aura:if>
