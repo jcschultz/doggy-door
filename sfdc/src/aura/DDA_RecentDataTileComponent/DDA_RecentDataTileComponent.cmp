@@ -40,7 +40,7 @@
 			</aura:if>
 			
 			<aura:if isTrue="{!not(v.showFront)}">
-				<div class="tile-back tile-face" aura:id="tileBack">
+				<div class="tile-back tile-face" aura:id="tileBack" onclick="{!c.flipTile}">
 					<div class="tile-title"><ui:outputRichText value="{!v.title}" /></div>
 					<aura:if isTrue="{!v.showChart}">
 						<div class="tile-chart-container" aura:id="chartContainer">
@@ -48,7 +48,7 @@
 						</div>
 					</aura:if>
 					<div class="tile-back-info"><ui:outputRichText value="{!v.tileBackInfo}" /></div>
-					<div class="flip-icon" onclick="{!c.flipTile}">
+					<div class="flip-icon">
 						<lightning:icon iconName="utility:reply" size="small" />
 					</div><!--.flip-icon-->
 				</div><!--.tile-back-->

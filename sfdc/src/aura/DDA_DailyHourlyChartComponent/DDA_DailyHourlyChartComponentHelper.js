@@ -23,6 +23,7 @@
 			return;
 		}
 		
+		
 		options = {
 			tooltips: {
 				enabled: true

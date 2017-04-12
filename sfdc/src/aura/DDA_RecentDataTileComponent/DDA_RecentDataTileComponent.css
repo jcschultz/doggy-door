@@ -27,11 +27,10 @@
 	margin: .5rem;
 	height: 200px;
 	position: relative;
-}
-
-.THIS .tile-front {
 	cursor: pointer;
 }
+
+.THIS .tile-front {}
 
 .THIS .tile-title {
 	white-space: nowrap;
