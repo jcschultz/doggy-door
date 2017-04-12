@@ -1,0 +1,10 @@
+<aura:component access="public" implements="forceCommunity:availableForAllPageTypes">
+	
+	<aura:attribute name="text" type="String" access="public" default="Update me!" description="Text to be displayed on screen." />
+	<aura:attribute name="class" type="String" access="public" default="" description="Optional css class to surround text." />
+    
+	<div class="dda-simple-text">
+		<div class="{!v.class}"><ui:outputRichText value="{!v.text}" /></div>
+	</div>
+	
+</aura:component>

@@ -1,0 +1,4 @@
+<design:component >
+	<design:attribute name="text" label="Text" />
+	<design:attribute name="class" label="Optional CSS Class" />
+</design:component>
